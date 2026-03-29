@@ -291,8 +291,9 @@
             <message key="name.invalidPattern"
                      value="Pattern variable name ''{0}'' must match pattern ''{1}''."/>
         </module>
+        <!-- Allow conventional single-letter generics, descriptive names ending in T, and ID. -->
         <module name="ClassTypeParameterName">
-            <property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)"/>
+            <property name="format" value="(^[A-Z][0-9]?)$|(^ID$)|([A-Z][a-zA-Z0-9]*[T]$)"/>
             <message key="name.invalidPattern"
                      value="Class type name ''{0}'' must match pattern ''{1}''."/>
         </module>
@@ -302,17 +303,17 @@
                      value="Record component name ''{0}'' must match pattern ''{1}''."/>
         </module>
         <module name="RecordTypeParameterName">
-            <property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)"/>
+            <property name="format" value="(^[A-Z][0-9]?)$|(^ID$)|([A-Z][a-zA-Z0-9]*[T]$)"/>
             <message key="name.invalidPattern"
                      value="Record type name ''{0}'' must match pattern ''{1}''."/>
         </module>
         <module name="MethodTypeParameterName">
-            <property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)"/>
+            <property name="format" value="(^[A-Z][0-9]?)$|(^ID$)|([A-Z][a-zA-Z0-9]*[T]$)"/>
             <message key="name.invalidPattern"
                      value="Method type name ''{0}'' must match pattern ''{1}''."/>
         </module>
         <module name="InterfaceTypeParameterName">
-            <property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)"/>
+            <property name="format" value="(^[A-Z][0-9]?)$|(^ID$)|([A-Z][a-zA-Z0-9]*[T]$)"/>
             <message key="name.invalidPattern"
                      value="Interface type name ''{0}'' must match pattern ''{1}''."/>
         </module>
