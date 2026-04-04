@@ -340,11 +340,17 @@
         <module name="AbbreviationAsWordInName">
             <property name="ignoreFinal" value="false"/>
             <property name="allowedAbbreviationLength" value="0"/>
-            <property name="allowedAbbreviations" value="SQL, MQ, DLQ, SLA, OAuth2"/>
+            <property name="allowedAbbreviations" value="SQL, MQ, DLQ, SLA"/>
             <property name="tokens"
                       value="CLASS_DEF, INTERFACE_DEF, ENUM_DEF, ANNOTATION_DEF, ANNOTATION_FIELD_DEF,
                     PARAMETER_DEF, VARIABLE_DEF, METHOD_DEF, PATTERN_VARIABLE_DEF, RECORD_DEF,
                     RECORD_COMPONENT_DEF"/>
+        </module>
+        <module name="SuppressionXpathSingleFilter">
+            <!-- OAuth2 contains two consecutive capitals (OA) which violates
+                 allowedAbbreviationLength=0, but the name is an industry term. -->
+            <property name="checks" value="AbbreviationAsWordInName"/>
+            <property name="message" value=".*OAuth2.*"/>
         </module>
         <module name="NoWhitespaceBeforeCaseDefaultColon"/>
         <module name="DeclarationOrder">
